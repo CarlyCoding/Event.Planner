@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+    <h1>
+        A very nice event planner! - by calum + carly :) 🎉 🍹 🏄
+    </h1>
+</header>
+<div>
+    <div class="input-form">
+        <form action="/events" method="POST">
+            <label for="input-date">Date:</label>
+            <input type="date" id="input-date" name="date" required>
+            
+            <label for="input-event-name">Event Name:</label>
+            <input type="text" id="input-event-name" name="event-name" required>
+
+            <label for="input-no-guests">Number of Guests:</label>
+            <input type="number" id="input-no-guests" name="no-guests" required>
+
+            <label for="input-room-location">Room Location:</label>
+            <input type="text" id="input-room-location" name="room-location" required>
+
+            <label for="input-description">Description:</label>
+            <input type="text" id="input-description" name="description" required>
+
+            <button>Add Event</button>
+        </form>
+    </div>
+
+    <ul>
+        {% for event in events %}
+            <div class="event">
+                <li>
+                    <p> Date: {{ event.date }} </p>
+                    <p> Event Name: {{ event.name_of_event }} </p>
+                    <p> Number of Guests: {{ event.number_of_guests }} </p>
+                    <p> Room Location: {{ event.room_location }} </p>
+                    <p> Description: {{ event.description }} </p>
+                </li>
+            </div>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

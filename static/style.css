@@ -1,0 +1,30 @@
+body {
+    background-color: #2E86AB;
+}
+
+header{
+    color: #3B1F2B;
+    font-family:cursive;
+}
+
+.event {
+    border: #C73E1D 25px solid;
+    padding: 10px;
+}
+
+.input-form {
+    background-color: #A23B72;
+    color: #F18F01;
+    padding: 50px;
+    display: flex;
+    text-align: center;
+}
+
+button {
+    background-color:#2E86AB;
+    margin-top: 30px;
+    padding: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16rem
+
+}
